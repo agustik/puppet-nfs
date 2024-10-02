@@ -11,7 +11,7 @@ class nfs::params (
   # Somehow the ::osfamily fact doesnt exist on some systems
 
   case $::operatingsystem {
-    'CentOS', 'RedHat', 'scientific', 'Fedora', 'SLC', 'OracleLinux', 'Amazon' : { $osfamily = 'redhat' }
+    'CentOS', 'RedHat', 'scientific', 'Fedora', 'SLC', 'OracleLinux', 'Amazon', 'Rocky' : { $osfamily = 'redhat' }
     'Debian'  : { $osfamily = 'debian' }
     'Ubuntu'  : { $osfamily = 'ubuntu' }
     'darwin'  : { $osfamily = 'darwin' }
